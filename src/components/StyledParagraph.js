@@ -1,0 +1,7 @@
+import React from 'react'
+import styled from 'styled-components'
+
+export default styled.p`
+  font-family: ${props => props.theme.bodyFont};
+  font-size: 1.2rem;
+`

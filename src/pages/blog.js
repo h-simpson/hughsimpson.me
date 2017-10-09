@@ -1,18 +1,18 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import BlogTile from '../components/BlogTile'
+import BlogPost from '../components/BlogPost'
 
 export default ({data}) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   return (
-    <div>
+    <section>
       <Helmet title={siteTitle} />
       {posts.map(post => {
         if (post.node.path !== '/404/') {
           const title = post.node.frontmatter.title || post.node.path
           return (
-            <BlogTile
+            <BlogPost
               frontmatter={post.node.frontmatter}
               excerpt={post.node.excerpt}
               key={title}
@@ -20,7 +20,7 @@ export default ({data}) => {
           )
         }
       })}
-    </div>
+    </section>
   )
 }
 

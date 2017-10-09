@@ -12,21 +12,21 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <article>
-        <Row>
+        <Row justifyContent="center">
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-          <StyledColumn>
+          <StyledColumn md={10} lg={8}>
             <BlogTitle>{post.frontmatter.title}</BlogTitle>
           </StyledColumn>
         </Row>
-        <Row>
-          <StyledColumn xs={6} sm={6} md={6} lg={6}>
+        <Row alignItems="baseline;" justifyContent="center">
+          <StyledColumn xs={6} sm={6} md={5} lg={6}>
             <BlogDate>{post.frontmatter.date}</BlogDate>
           </StyledColumn>
-          <StyledColumn xs={6} sm={6} md={6} lg={4}>
+          <StyledColumn xs={6} sm={6} md={5} lg={2}>
             <BlogCategory>{post.frontmatter.category}</BlogCategory>
           </StyledColumn>
         </Row>
-        <Row>
+        <Row justifyContent="center">
           <StyledColumn md={10} lg={8}>
             <BlogBody dangerouslySetInnerHTML={{__html: post.html}} />
           </StyledColumn>
