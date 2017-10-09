@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import { Page, Row, Column } from 'hedron'
 import styled, { ThemeProvider } from 'styled-components'
+import globalStyles from '../styles/globalStyle'
 import theme from '../styles/theme.js'
 import Menu from '../components/Menu.js'
 
