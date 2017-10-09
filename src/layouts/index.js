@@ -22,7 +22,18 @@ class Template extends React.Component {
   }
 }
 
-const HeaderBackground = styled.div``
+const HeaderBackground = styled.div`
+  background-color: #f3f3f3;
+  height: 30vh;
+  margin: 0;
+  position: absolute;
+  width: 100vw;
+  z-index: -1;
+
+  @media (max-width: 770px) {
+    height: 35vh;
+  }
+`
 
 Template.propTypes = {
   children: PropTypes.func,

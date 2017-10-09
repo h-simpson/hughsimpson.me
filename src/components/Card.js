@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Column} from 'hedron'
+import { Column } from 'hedron'
 
 export default styled(Column)`
   background-color: #fff;

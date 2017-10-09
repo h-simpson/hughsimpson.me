@@ -16,7 +16,7 @@ class Index extends React.Component {
       <section>
         <Helmet title={siteTitle} />
         <Row justifyContent="center">
-          <Column md={6} lg={4}>
+          <Column sm={9} md={6} lg={4}>
             <StyledParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
