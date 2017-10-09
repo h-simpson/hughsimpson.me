@@ -32,7 +32,7 @@
   },
   "homepage": "",
   "keywords": ["gatsby"],
-  "license": "",
+  "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
