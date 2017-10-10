@@ -7,10 +7,11 @@ const theme = {
   headingFont: 'Average Sans',
 
   // Colors
-  bodyFontColor: '#111111',
-  headingFontColor: '#111111',
-  linkFontColor: '#203cfd',
-  linkFontHoverColor: '#6265fe'
+  bodyFontColor: '#525f7f',
+  headingFontColor: '#525f7f',
+  linkColor: '#203cfd',
+  clickedLinkColor: '#3d51d3',
+  backgroundColor: '#f6f9fc'
 }
 
 export default theme

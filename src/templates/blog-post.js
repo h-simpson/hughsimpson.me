@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import get from 'lodash/get'
-import {Page, Row, Column} from 'hedron'
+import { Page, Row, Column } from 'hedron'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -28,7 +28,7 @@ class BlogPostTemplate extends React.Component {
         </Row>
         <Row justifyContent="center">
           <StyledColumn md={10} lg={8}>
-            <BlogBody dangerouslySetInnerHTML={{__html: post.html}} />
+            <BlogBody dangerouslySetInnerHTML={{ __html: post.html }} />
           </StyledColumn>
         </Row>
       </article>
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       id
       html
       frontmatter {

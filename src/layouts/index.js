@@ -14,22 +14,33 @@ class Template extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Page fluid={true}>
-          <HeaderBackground />
+          <TopBackground />
           <Menu />
           {children()}
+          <PageFooter>Designed and developed by Hugh Simpson © 2017</PageFooter>
         </Page>
       </ThemeProvider>
     )
   }
 }
 
-const HeaderBackground = styled.div`
-  background-color: #f3f3f3;
-  height: 30vh;
-  margin: 0;
-  position: absolute;
+const PageFooter = styled.footer`
+  color: ${props => props.theme.headingFontColor};
+  font-family: ${props => props.theme.headingFont};
+  margin-top: 50px;
+  text-align: center;
   width: 100vw;
-  z-index: -1;
+`
+
+const TopBackground = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 95vh;
+  transform: skewY(-12deg);
+  transform-origin: 0;
+  background-color: #fff;
+  z-index: -999;
 
   @media (max-width: 770px) {
     height: 35vh;

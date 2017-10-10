@@ -5,7 +5,7 @@ import { Page, Row, Column } from 'hedron'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import theme from '../styles/theme.js'
-import StyledLink from '../components/StyledLink'
+import Contact from '../components/Contact'
 import StyledParagraph from '../components/StyledParagraph'
 
 class Index extends React.Component {
@@ -16,7 +16,7 @@ class Index extends React.Component {
       <section>
         <Helmet title={siteTitle} />
         <Row justifyContent="center">
-          <Column sm={9} md={6} lg={4}>
+          <Column sm={10} md={10} lg={10}>
             <StyledParagraph>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -24,37 +24,13 @@ class Index extends React.Component {
             </StyledParagraph>
           </Column>
         </Row>
-        <Row justifyContent="center">
-          <Column md={4} lg={4}>
-            <ContactItem>
-              <StyledLink href="mailto:hugh@hughsimpson.me">Email</StyledLink>
-            </ContactItem>
-            <ContactItem>
-              <StyledLink href="https://www.linkedin.com/in/h-simpson">LinkedIn</StyledLink>
-            </ContactItem>
-            <ContactItem>
-              <StyledLink href="https://www.github.com/h-simpson">GitHub</StyledLink>
-            </ContactItem>
-          </Column>
-        </Row>
+        <Contact />
       </section>
     )
   }
 }
 
 export default Index
-
-const ContactItem = styled.h1`
-  color: ${props => props.theme.linkFontColor};
-  font-family: ${props => props.theme.headingFont};
-  font-weight: 100;
-  font-size: 1.8rem;
-  text-align: center;
-
-  @media (min-width: 900px) {
-    font-size: 2.4rem;
-  }
-`
 
 export const pageQuery = graphql`
   query ContactQuery {
