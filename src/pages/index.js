@@ -16,11 +16,12 @@ class Index extends React.Component {
       <section>
         <Helmet title={siteTitle} />
         <Row justifyContent="center">
-          <Column sm={10} md={10} lg={10}>
+          <Column sm={10} md={10} lg={8}>
             <StyledParagraph>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.
+              Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub copper mug air
+              plant. Live-edge fam kale chips, sriracha prism kombucha lyft post-ironic listicle. Health goth jianbing
+              meggings shoreditch. Cliche cray seitan, typewriter everyday carry organic cold-pressed austin church-key
+              irony .
             </StyledParagraph>
           </Column>
         </Row>

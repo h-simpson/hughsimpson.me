@@ -5,7 +5,7 @@ import { Page, Row, Column } from 'hedron'
 import UnpaddedColumn from '../components/UnpaddedColumn'
 
 const Contact = () => (
-  <section id="contact">
+  <ContactContainer id="contact">
     <Row>
       <UnpaddedColumn>
         <ContactHeading>Want to get in contact?</ContactHeading>
@@ -18,21 +18,21 @@ const Contact = () => (
         <ContactLink href="https://www.github.com/h-simpson">GitHub</ContactLink>
       </UnpaddedColumn>
     </Row>
-  </section>
+  </ContactContainer>
 )
 
 export default Contact
+
+const ContactContainer = styled.section`margin-left: 20px;`
 
 const ContactLink = styled(StyledLink)`
   font-size: 1.5rem;
   font-family: ${props => props.theme.headingFont};
   margin-right: 2rem;
-  margin-left: 20px;
 `
 
 const ContactHeading = styled.h2`
   color: ${props => props.theme.headingFontColor};
   font-size: 2rem;
   font-family: ${props => props.theme.headingFont};
-  padding-left: 20px;
 `

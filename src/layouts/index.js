@@ -14,7 +14,8 @@ class Template extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Page fluid={true}>
-          <TopBackground />
+          <WhiteBackground />
+          <PurpleBackground />
           <Menu />
           {children()}
           <PageFooter>Designed and developed by Hugh Simpson © 2017</PageFooter>
@@ -32,7 +33,7 @@ const PageFooter = styled.footer`
   width: 100vw;
 `
 
-const TopBackground = styled.div`
+const WhiteBackground = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
@@ -43,7 +44,22 @@ const TopBackground = styled.div`
   z-index: -999;
 
   @media (max-width: 770px) {
-    height: 35vh;
+    height: 65vh;
+  }
+`
+
+const PurpleBackground = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 55vh;
+  transform: skewY(-35deg);
+  transform-origin: 0;
+  background-color: #f5eefe;
+  z-index: -999;
+
+  @media (max-width: 770px) {
+    height: 65vh;
   }
 `
 

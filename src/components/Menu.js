@@ -41,6 +41,10 @@ const MenuList = styled.ul`
 const ListItem = styled.li`
   display: inline;
   font-family: ${props => props.theme.headingFont};
-  padding: 0.7em;
+  padding: 1.5em;
+
+  @media (max-width: 770px) {
+    padding: 0.5rem;
+  }
 `
 const MenuLink = styled(StyledLink)`font-size: 1.3rem;`
