@@ -4,10 +4,7 @@ import { Page, Row, Column } from 'hedron'
 import styled, { ThemeProvider } from 'styled-components'
 
 export default () => (
-  <Row alignItems="baseline;" justifyContent="space-between;">
-    <Column md={6} lg={7}>
-      <SiteHeading to={'/'}>Hugh Simpson</SiteHeading>
-    </Column>
+  <Row alignItems="baseline;" justifyContent="flex-end;">
     <Column md={6} lg={5}>
       <MenuList>
         <ListItem>
@@ -26,11 +23,6 @@ export default () => (
     </Column>
   </Row>
 )
-
-const SiteHeading = styled(StyledLink)`
-  font-family: ${props => props.theme.headingFont};
-  font-size: 2rem;
-`
 
 const MenuList = styled.ul`
   list-style: none;

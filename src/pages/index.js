@@ -17,6 +17,7 @@ class Index extends React.Component {
         <Helmet title={siteTitle} />
         <Row justifyContent="center">
           <Column sm={10} md={10} lg={8}>
+            <SiteTitle>Hugh Simpson</SiteTitle>
             <StyledParagraph>
               Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub copper mug air
               plant. Live-edge fam kale chips, sriracha prism kombucha lyft post-ironic listicle. Health goth jianbing
@@ -32,6 +33,13 @@ class Index extends React.Component {
 }
 
 export default Index
+
+const SiteTitle = styled.h1`
+  color: ${props => props.theme.headingFontColor};
+  font-family: ${props => props.theme.headingFont};
+  font-size: 4rem;
+  margin: 0 0 50px 0;
+`
 
 export const pageQuery = graphql`
   query ContactQuery {
