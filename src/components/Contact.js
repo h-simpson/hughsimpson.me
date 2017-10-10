@@ -6,13 +6,13 @@ import UnpaddedColumn from '../components/UnpaddedColumn'
 
 const Contact = () => (
   <ContactContainer id="contact">
-    <Row>
-      <UnpaddedColumn>
+    <Row justifyContent="center">
+      <UnpaddedColumn sm={10} md={10} lg={8}>
         <ContactHeading>Want to get in contact?</ContactHeading>
       </UnpaddedColumn>
     </Row>
-    <Row>
-      <UnpaddedColumn>
+    <Row justifyContent="center">
+      <UnpaddedColumn sm={10} md={10} lg={8}>
         <ContactLink href="mailto:hugh@hughsimpson.me">Email</ContactLink>
         <ContactLink href="https://www.linkedin.com/in/h-simpson">LinkedIn</ContactLink>
         <ContactLink href="https://www.github.com/h-simpson">GitHub</ContactLink>
