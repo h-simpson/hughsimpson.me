@@ -56,7 +56,24 @@ const PublishDate = styled.h4`
   padding-left: 1rem;
 `
 
-const ImgContainer = styled(UnpaddedColumn)`@media (max-width: 764px) {display: none;}`
+const ImgContainer = styled(UnpaddedColumn)`
+  height: 100%;
+  position: relative;
+
+  :after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(193, 221, 255, 0.9);
+    width: 10%;
+  }
+
+  @media (max-width: 764px) {
+    display: none;
+  }
+`
 
 const Img = styled.img`
   max-width: 100%;
