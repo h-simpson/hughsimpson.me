@@ -15,7 +15,7 @@ class Template extends React.Component {
       <ThemeProvider theme={theme}>
         <Page fluid={true}>
           <WhiteBackground />
-          <PurpleBackground />
+          {/* <PurpleBackground /> */}
           <Menu />
           {children()}
           <PageFooter>Designed and developed by Hugh Simpson © 2017</PageFooter>

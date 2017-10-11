@@ -7,18 +7,19 @@ import Card from '../components/Card'
 import StyledParagraph from '../components/StyledParagraph'
 import Button from '../components/Button'
 
-export default ({ frontmatter, excerpt }) => (
+export default ({ title, date, category, image, excerpt }) => (
   <Container>
     <Card md={10} lg={9}>
       <Row>
-        <Title>{frontmatter.title}</Title>
+        <Title>{title}</Title>
       </Row>
+      <img src={image.childImageSharp.responsiveResolution.src} />
       <Row alignItems="baseline;" justifyContent="space-between;">
         <UnpaddedColumn xs={6} sm={6} md={6}>
-          <PublishDate>{frontmatter.date}</PublishDate>
+          <PublishDate>{date}</PublishDate>
         </UnpaddedColumn>
         <UnpaddedColumn xs={6} sm={3} md={3}>
-          <Category>{frontmatter.category}</Category>
+          <Category>{category}</Category>
         </UnpaddedColumn>
       </Row>
       <Row>

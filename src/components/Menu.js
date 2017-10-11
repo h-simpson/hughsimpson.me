@@ -14,9 +14,6 @@ export default () => (
           <MenuLink to="/blog">Blog</MenuLink>
         </ListItem>
         <ListItem>
-          <MenuLink to="/#projects">Projects</MenuLink>
-        </ListItem>
-        <ListItem>
           <MenuLink to="/#contact">Contact</MenuLink>
         </ListItem>
       </MenuList>

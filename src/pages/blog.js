@@ -11,7 +11,7 @@ export default ({ data }) => {
       {posts.map(post => {
         if (post.node.path !== '/404/') {
           const title = post.node.frontmatter.title || post.node.path
-          return <BlogPost frontmatter={post.node.frontmatter} excerpt={post.node.excerpt} key={title} />
+          return <BlogPost {...post.node.frontmatter} excerpt={post.node.excerpt} key={title} />
         }
       })}
     </section>
@@ -34,6 +34,13 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             category
+            image {
+              childImageSharp {
+                responsiveResolution {
+                  src
+                }
+              }
+            }
           }
         }
       }
