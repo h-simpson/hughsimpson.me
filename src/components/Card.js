@@ -6,6 +6,7 @@ export default styled(Column)`
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 5px 30px -7px rgba(0, 0, 0, 0.3);
+  padding: 0;
 
   &:hover {
     box-shadow: 0px 15px 50px -12px rgba(0, 0, 0, 0.3);

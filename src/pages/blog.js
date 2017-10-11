@@ -11,7 +11,7 @@ export default ({ data }) => {
       {posts.map(post => {
         if (post.node.path !== '/404/') {
           const title = post.node.frontmatter.title || post.node.path
-          return <BlogPost {...post.node.frontmatter} excerpt={post.node.excerpt} key={title} />
+          return <BlogPost {...post.node.frontmatter} key={title} />
         }
       })}
     </section>
@@ -28,15 +28,15 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           frontmatter {
             path
             date(formatString: "DD MMMM, YYYY")
             title
             category
+            excerpt
             image {
               childImageSharp {
-                responsiveResolution {
+                responsiveSizes {
                   src
                 }
               }
