@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { Page, Row, Column } from 'hedron'
 
-const BlogPostPreview = ({ title, date, category, image, excerpt, path }) => (
+const BlogPostPreview = ({ title, date, author, image, excerpt, path }) => (
   <Container>
-    <PostCard sm={12} md={7} lg={7} fluid>
+    <PostCard sm={11} md={8} lg={6} fluid>
       <PostLink to={path}>
         <PostTitle>{title}</PostTitle>
         <PostExcerpt>{excerpt}</PostExcerpt>
-        <PostDate>{date}</PostDate>
+        <BlogAuthor>
+          {author} on {date}
+        </BlogAuthor>
       </PostLink>
     </PostCard>
   </Container>
@@ -23,7 +25,7 @@ const Container = styled(Row)`
 `
 
 const PostCard = styled(Column)`
-  padding: 2.1rem 3.15rem;
+  padding: 3.5rem 3.15rem;
   background-color: #fff;
   border-radius: 4px;
   box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
@@ -46,24 +48,18 @@ const PostLink = styled(Link)`
 const PostTitle = styled.h1`
   font-family: ${props => props.theme.headingFont};
   font-size: 1.5rem;
-  padding: 0 1rem;
+  line-height: 2.5rem;
 `
 
 const PostExcerpt = styled.p`
-  font-family: ${props => props.theme.bodyFont};
-  font-size: 1.2rem;
-  padding: 0 1rem;
+  font-family: ${props => props.theme.headingFont};
+  font-size: 1rem;
   margin: 0;
+  padding-bottom: 0.5rem;
 `
 
-const PostCategory = styled.h3`
-  color: ${props => props.theme.linkColor};
+const BlogAuthor = styled.p`
   font-family: ${props => props.theme.headingFont};
-  font-size: 1.2rem;
-`
-
-const PostDate = styled.h4`
-  font-family: ${props => props.theme.headingFont};
-  font-size: 1.2rem;
-  padding-left: 1rem;
+  color: ${props => props.theme.secondaryBodyFontColor};
+  font-size: 1rem;
 `

@@ -7,7 +7,7 @@ export default ({ data }) => {
   const posts = data.allMarkdownRemark.edges
   return (
     <section>
-      <Helmet title={siteTitle} />
+      {<Helmet title={siteTitle} />}
       {posts.map(post => {
         if (post.node.path !== '/404/') {
           const title = post.node.frontmatter.title || post.node.path
@@ -30,9 +30,9 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM Do YYYY")
             title
-            category
+            author
             excerpt
           }
         }

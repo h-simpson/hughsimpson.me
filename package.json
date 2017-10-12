@@ -26,6 +26,9 @@
     "lodash": "^4.15.0",
     "prop-types": "^15.5.10",
     "typeface-average-sans": "^0.0.35",
+    "typeface-fira-sans": "^0.0.35",
+    "typeface-nobile": "^0.0.35",
+    "typeface-pt-sans": "^0.0.35",
     "typeface-spectral": "^0.0.35"
   },
   "devDependencies": {

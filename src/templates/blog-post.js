@@ -86,15 +86,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        category
-        image {
-          childImageSharp {
-            responsiveSizes {
-              src
-            }
-          }
-        }
+        date(formatString: "MMMM Do YYYY")
+        author
       }
     }
   }

@@ -2,7 +2,7 @@
 title: Hello World, this is a much longer and more realistic title
 date: "2015-05-01T22:12:03.284Z"
 path: "/hello-world/"
-category: "javascript"
+author: Hugh Simpson
 image: "./salty_egg.jpg"
 excerpt: This is my first post on my new fake blog! How exciting!
 ---
