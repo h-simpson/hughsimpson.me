@@ -5,6 +5,7 @@
   "author": "Hugh Simpson",
   "dependencies": {
     "gatsby": "^1.9.55",
+    "gatsby-image": "^1.0.11",
     "gatsby-link": "^1.6.8",
     "gatsby-plugin-google-analytics": "^1.0.4",
     "gatsby-plugin-manifest": "^1.0.4",
