@@ -5,7 +5,7 @@ import { Page } from 'hedron'
 import styled, { ThemeProvider } from 'styled-components'
 import globalStyles from '../styles/globalStyle'
 import theme from '../styles/theme.js'
-import Menu from '../components/Menu.js'
+import Navigation from '../components/Navigation.js'
 
 class Template extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class Template extends React.Component {
     return (
       <ThemeProvider theme={theme}>
         <Page fluid={true}>
-          <Menu />
+          <Navigation />
           {children()}
           <PageFooter>Designed and developed by Hugh Simpson</PageFooter>
         </Page>
