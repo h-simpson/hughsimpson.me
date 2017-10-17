@@ -9,10 +9,14 @@ export default () => (
   <Row justifyContent="space-between;">
     <MenuList>
       <ListItem>
-        <LinkedIn />
+        <a href="/" target="_blank" rel="nofollow">
+          <LinkedIn />
+        </a>
       </ListItem>
       <ListItem>
-        <GitHubIcon />
+        <a href="/" target="_blank" rel="nofollow">
+          <GitHubIcon />
+        </a>
       </ListItem>
     </MenuList>
     <MenuList>
@@ -35,9 +39,15 @@ const MenuList = styled.ul`
   margin: 2rem 0 0 0;
   padding: 0;
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   svg {
     height: 1.5rem;
     width: 1.5rem;
+    cursor: pointer;
   }
 `
 
