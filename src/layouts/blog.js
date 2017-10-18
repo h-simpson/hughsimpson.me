@@ -6,6 +6,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import globalStyles from '../styles/globalStyle'
 import theme from '../styles/theme.js'
 import Navigation from '../components/Navigation.js'
+import MobileNavigation from '../components/MobileNavigation.js'
 
 class Template extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class Template extends React.Component {
           <Navigation />
           {children()}
           <PageFooter>Designed and developed by Hugh Simpson</PageFooter>
+          <MobileNavigation />
         </Page>
       </ThemeProvider>
     )
