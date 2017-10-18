@@ -26,7 +26,6 @@ class Index extends React.Component {
             </StyledParagraph>
           </Column>
         </Row>
-        <Contact />
       </section>
     )
   }
