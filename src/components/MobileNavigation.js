@@ -1,13 +1,12 @@
 import React from 'react'
 import StyledLink from '../components/StyledLink'
-import { Page, Row, Column } from 'hedron'
 import styled, { ThemeProvider } from 'styled-components'
 import GitHubIcon from 'react-icons/lib/fa/github'
 import LinkedIn from 'react-icons/lib/fa/linkedin'
 import Email from 'react-icons/lib/md/email'
 
 export default () => (
-  <Row justifyContent="space-between;">
+  <MenuRow>
     <MenuList>
       <ListItem>
         <a href="/" target="_blank" rel="nofollow">
@@ -32,18 +31,33 @@ export default () => (
       <ListItem>
         <MenuLink to="/blog">Blog</MenuLink>
       </ListItem>
-      <ListItem>
-        <MenuLink to="/#contact">Contact</MenuLink>
-      </ListItem>
     </MenuList>
-  </Row>
+  </MenuRow>
 )
+
+const MenuRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #eed9ff;
+  border-top: 4px solid #9063bb;
+
+  @media (min-width: 770px) {
+    border: none;
+  }
+`
 
 const MenuList = styled.ul`
   list-style: none;
   text-align: center;
-  margin: 2rem 0 0 0;
   padding: 0;
+  display: none;
+  justify-content: space-between;
 
   a {
     text-decoration: none;
@@ -57,7 +71,8 @@ const MenuList = styled.ul`
   }
 
   @media (max-width: 770px) {
-    display: none;
+    padding: 0.5rem;
+    display: block;
   }
 `
 

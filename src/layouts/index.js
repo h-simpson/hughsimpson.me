@@ -6,6 +6,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import globalStyles from '../styles/globalStyle'
 import theme from '../styles/theme.js'
 import Navigation from '../components/Navigation.js'
+import MobileNavigation from '../components/MobileNavigation.js'
 
 class Template extends React.Component {
   render() {
@@ -15,10 +16,10 @@ class Template extends React.Component {
       <ThemeProvider theme={theme}>
         <Page fluid={true}>
           <WhiteBackground />
-          {/* <PurpleBackground /> */}
+          <PurpleBackground />
           <Navigation />
           {children()}
-          <PageFooter>Designed and developed by Hugh Simpson</PageFooter>
+          <MobileNavigation />
         </Page>
       </ThemeProvider>
     )
@@ -26,14 +27,6 @@ class Template extends React.Component {
 }
 
 export default Template
-
-const PageFooter = styled.footer`
-  color: ${props => props.theme.secondaryBodyFontColor};
-  font-family: ${props => props.theme.headingFont};
-  margin-top: 50px;
-  text-align: center;
-  width: 100vw;
-`
 
 const WhiteBackground = styled.div`
   position: absolute;
