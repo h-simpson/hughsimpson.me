@@ -26,10 +26,7 @@
     "lodash": "^4.15.0",
     "prop-types": "^15.5.10",
     "react-icons": "^2.2.7",
-    "typeface-average-sans": "^0.0.35",
-    "typeface-fira-sans": "^0.0.35",
-    "typeface-nobile": "^0.0.35",
-    "typeface-pt-sans": "^0.0.35",
+    "typeface-scope-one": "^0.0.40",
     "typeface-spectral": "^0.0.35"
   },
   "devDependencies": {

@@ -1,12 +1,10 @@
 require('typeface-spectral')
-require('typeface-fira-sans')
-require('typeface-average-sans')
-require('typeface-nobile')
+require('typeface-scope-one')
 
 const theme = {
   // Typography
   bodyFont: 'Spectral',
-  headingFont: 'Fira Sans',
+  headingFont: 'Scope One',
 
   // Colors
   bodyFontColor: '#3d3347',
