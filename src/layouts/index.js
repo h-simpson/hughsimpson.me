@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
-import { Page, Row, Column } from 'hedron'
 import styled, { ThemeProvider } from 'styled-components'
 import globalStyles from '../styles/globalStyle'
 import theme from '../styles/theme.js'
@@ -14,13 +13,13 @@ class Template extends React.Component {
 
     return (
       <ThemeProvider theme={theme}>
-        <Page fluid={true}>
+        <div>
           <WhiteBackground />
           <PurpleBackground />
           <Navigation />
           {children()}
           <MobileNavigation />
-        </Page>
+        </div>
       </ThemeProvider>
     )
   }

@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
-import { Page, Row, Column } from 'hedron'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import theme from '../styles/theme.js'
@@ -12,10 +11,10 @@ class Index extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const email = get(this, 'props.data.site.siteMetadata.email')
     return (
-      <section>
+      <div>
         <Helmet title={siteTitle} />
-        <Row justifyContent="center">
-          <Column sm={10} md={10} lg={8}>
+        <Hero>
+          <HeroContent>
             <SiteTitle>Hugh Simpson</SiteTitle>
             <StyledParagraph>
               Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub copper mug air
@@ -23,14 +22,42 @@ class Index extends React.Component {
               meggings shoreditch. Cliche cray seitan, typewriter everyday carry organic cold-pressed austin church-key
               irony .
             </StyledParagraph>
-          </Column>
-        </Row>
-      </section>
+          </HeroContent>
+        </Hero>
+      </div>
     )
   }
 }
 
 export default Index
+
+const Hero = styled.section`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 88vh;
+  align-items: center;
+  justify-content: center;
+`
+
+const HeroContent = styled.div`
+  display: block;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+
+  @media (min-width: 500px) {
+    width: 80%;
+  }
+
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+  @media (min-width: 1100px) {
+    width: 80%;
+  }
+`
 
 const SiteTitle = styled.h1`
   color: ${props => props.theme.headingFontColor};

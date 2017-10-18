@@ -35,7 +35,7 @@ export default () => (
   </MenuRow>
 )
 
-const MenuRow = styled.div`
+const MenuRow = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
