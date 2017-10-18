@@ -5,7 +5,6 @@ import { Page, Row, Column } from 'hedron'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import theme from '../styles/theme.js'
-import Contact from '../components/Contact'
 import StyledParagraph from '../components/StyledParagraph'
 
 class Index extends React.Component {
