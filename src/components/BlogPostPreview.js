@@ -28,6 +28,7 @@ const Container = styled(Row)`
 
 const PostCard = styled(Column)`
   padding: 0.5rem 1.15rem;
+  transition: padding 500ms ease;
 
   @media (min-width: 770px) {
     padding: 3.5rem 3.15rem;
