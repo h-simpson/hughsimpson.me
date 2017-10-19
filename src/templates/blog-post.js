@@ -4,7 +4,6 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import get from 'lodash/get'
 import { Page, Row, Column } from 'hedron'
-import Img from 'gatsby-image'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,9 +14,6 @@ class BlogPostTemplate extends React.Component {
       <article>
         <Row justifyContent="center">
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-          <ImgContainer xs={6} sm={6} md={6}>
-            <Img src={post.frontmatter.image.childImageSharp.responsiveSizes.src} />
-          </ImgContainer>
           <StyledColumn md={10} lg={8}>
             <BlogTitle>{post.frontmatter.title}</BlogTitle>
           </StyledColumn>
@@ -69,9 +65,9 @@ const BlogBody = styled.section`
   font-size: 1.3rem;
 `
 
-const StyledColumn = styled(Column)`padding-top: 0;`
-
-const ImgContainer = styled(Column)``
+const StyledColumn = styled(Column)`
+  padding-top: 0;
+`
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
