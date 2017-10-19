@@ -28,7 +28,7 @@ const Container = styled(Row)`
 
 const PostCard = styled(Column)`
   padding: 0.5rem 1.15rem;
-  transition: padding 500ms ease;
+  transition: padding 300ms ease;
 
   @media (min-width: 770px) {
     padding: 3.5rem 3.15rem;
@@ -57,7 +57,7 @@ const PostLink = styled(Link)`
 const PostTitle = styled.h1`
   font-family: ${props => props.theme.headingFont};
   font-size: 1.5rem;
-  line-height: 2.5rem;
+  font-weight: bold;
 `
 
 const PostExcerpt = styled.p`

@@ -10,8 +10,8 @@ const theme = {
   bodyFontColor: '#3d3347',
   secondaryBodyFontColor: 'rgba(38, 32, 44, .5)',
   headingFontColor: '#26202c',
-  linkColor: '#203cfd',
-  clickedLinkColor: '#3d51d3',
+  linkColor: '#9063bb',
+  clickedLinkColor: '#eed9ff',
   backgroundColor: '#f6f9fc'
 }
 
