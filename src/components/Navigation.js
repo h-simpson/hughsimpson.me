@@ -31,9 +31,6 @@ export default () => (
       <ListItem>
         <MenuLink to="/blog">Blog</MenuLink>
       </ListItem>
-      <ListItem>
-        <MenuLink to="/#contact">Contact</MenuLink>
-      </ListItem>
     </MenuList>
   </Menu>
 )
