@@ -20,23 +20,31 @@ const BlogPostPreview = ({ title, date, author, image, excerpt, path }) => (
 export default BlogPostPreview
 
 const Container = styled(Row)`
-  margin-bottom: 20px;
+  @media (min-width: 770px) {
+    margin-bottom: 20px;
+  }
   justify-content: center;
 `
 
 const PostCard = styled(Column)`
-  padding: 3.5rem 3.15rem;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    box-shadow: rgba(25, 17, 34, 0.1) 0px 10px 42px;
-    transform: translateY(-4px);
-  }
-  &:active {
-    box-shadow: rgba(25, 17, 34, 0.1) 0px 10px 42px;
-    transform: translateY(-4px);
+  padding: 0.5rem 1.15rem;
+
+  @media (min-width: 770px) {
+    padding: 3.5rem 3.15rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      box-shadow: rgba(25, 17, 34, 0.1) 0px 10px 42px;
+      transform: translateY(-4px);
+    }
+
+    &:active {
+      box-shadow: rgba(25, 17, 34, 0.1) 0px 10px 42px;
+      transform: translateY(-4px);
+    }
   }
 `
 
