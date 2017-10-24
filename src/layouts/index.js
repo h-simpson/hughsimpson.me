@@ -7,6 +7,9 @@ import theme from '../styles/theme.js'
 import Navigation from '../components/Navigation.js'
 import MobileNavigation from '../components/MobileNavigation.js'
 
+// Require styles for code block syntax highlighting (with Prism)
+require('../styles/prism.css')
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
