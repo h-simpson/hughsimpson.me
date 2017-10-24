@@ -9,11 +9,21 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteURL = get(this.props, 'data.site.siteMetadata.url')
 
     return (
       <article>
         <Row justifyContent="center">
-          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <Helmet>
+            <title>{`${post.frontmatter.title} | ${siteTitle}`}</title>
+            <meta name="description" content={`${post.frontmatter.excerpt}`} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={`${siteURL}${post.frontmatter.path}`} />
+            <meta property="og:title" content={siteTitle} />
+            <meta property="og:description" content={`${post.frontmatter.excerpt}`} />
+            <meta property="og:site_name" content={siteTitle} />
+            <meta property="og:locale" content="en_UK" />
+          </Helmet>
           <StyledColumn md={10} lg={8}>
             <BlogTitle>{post.frontmatter.title}</BlogTitle>
           </StyledColumn>
@@ -75,6 +85,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        url
       }
     }
     markdownRemark(frontmatter: { path: { eq: $path } }) {
@@ -84,6 +95,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM Do YYYY")
         author
+        excerpt
+        path
       }
     }
   }

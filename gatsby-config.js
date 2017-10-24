@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Hugh Simpson',
     author: 'Hugh Simpson',
+    url: 'https://hughsimpson.me',
     email: 'hugh@hughsimpon.me'
   },
   plugins: [

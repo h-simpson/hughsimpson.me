@@ -9,10 +9,15 @@ import StyledParagraph from '../components/StyledParagraph'
 class Index extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const email = get(this, 'props.data.site.siteMetadata.email')
     return (
       <div>
-        <Helmet title={siteTitle} />
+        <Helmet>
+          <title>{siteTitle}</title>
+          <meta
+            name="description"
+            content="Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub."
+          />
+        </Helmet>
         <Hero>
           <HeroContent>
             <SiteTitle>Hugh Simpson</SiteTitle>
