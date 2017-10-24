@@ -9,17 +9,17 @@ export default () => (
   <MenuRow>
     <MenuList>
       <ListItem>
-        <a href="/" target="_blank" rel="nofollow">
+        <a href="https://www.linkedin.com/in/h-simpson/" target="_blank" rel="nofollow noopener">
           <LinkedIn />
         </a>
       </ListItem>
       <ListItem>
-        <a href="/" target="_blank" rel="nofollow">
+        <a href="https://www.linkedin.com/in/h-simpson/" target="_blank" rel="nofollow noopener">
           <GitHubIcon />
         </a>
       </ListItem>
       <ListItem>
-        <a href="mailto:hughesimpson@gmail.com" target="_blank" rel="nofollow">
+        <a href="mailto:hughesimpson@gmail.com" target="_blank" rel="nofollow noopener">
           <Email />
         </a>
       </ListItem>

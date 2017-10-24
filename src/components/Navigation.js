@@ -9,17 +9,17 @@ export default () => (
   <Menu>
     <MenuList>
       <ListItem>
-        <a href="/" target="_blank" rel="nofollow">
+        <a href="https://www.linkedin.com/in/h-simpson/" target="_blank" rel="nofollow noopener">
           <LinkedIn />
         </a>
       </ListItem>
       <ListItem>
-        <a href="/" target="_blank" rel="nofollow">
+        <a href="https://github.com/h-simpson" target="_blank" rel="nofollow noopener">
           <GitHubIcon />
         </a>
       </ListItem>
       <ListItem>
-        <a href="mailto:hughesimpson@gmail.com" target="_blank" rel="nofollow">
+        <a href="mailto:hughesimpson@gmail.com" target="_blank" rel="nofollow noopener">
           <Email />
         </a>
       </ListItem>
@@ -41,6 +41,7 @@ const Menu = styled.nav`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 2rem;
 
   @media (max-width: 770px) {
     display: none;
@@ -80,7 +81,7 @@ const ListItem = styled.li`
 `
 const MenuLink = styled(StyledLink)`
   font-size: 1.1rem;
-  font: 300;
+  font-weight: bold;
   color: ${props => props.theme.bodyFontColor};
   text-transform: uppercase;
 `
