@@ -59,13 +59,14 @@ const PostTitle = styled.h1`
   font-family: ${props => props.theme.fontFamilyPrimary};
   color: ${props => props.theme.paletteFontPrimary};
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 400;
 `
 
 const PostExcerpt = styled.p`
   font-family: ${props => props.theme.fontFamilyPrimary};
   color: ${props => props.theme.paletteFontSecondary};
   font-size: 1rem;
+  font-weight: 100;
   margin: 0;
   padding-bottom: 0.5rem;
   line-height: 1.5;
@@ -75,4 +76,14 @@ const BlogAuthor = styled.p`
   font-family: ${props => props.theme.fontFamilyPrimary};
   color: ${props => props.theme.paletteFontSecondary};
   font-size: 1rem;
+
+  :before {
+    width: 30px;
+    height: 4px;
+    background-color: ${props => props.theme.palettePrimary};
+    display: block;
+    content: '';
+    position: absolute;
+    margin-top: 2rem;
+  }
 `

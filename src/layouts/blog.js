@@ -25,14 +25,6 @@ class Template extends React.Component {
 
 export default Template
 
-const PageFooter = styled.footer`
-  color: ${props => props.theme.paletteFontSecondary};
-  font-family: ${props => props.theme.fontFamilyPrimary};
-  margin-top: 50px;
-  text-align: center;
-  width: 100vw;
-`
-
 Template.propTypes = {
   children: PropTypes.func,
   location: PropTypes.object,

@@ -52,7 +52,7 @@ const MenuList = styled.ul`
   list-style: none;
   text-align: center;
   margin: 2rem 0 0 0;
-  padding: 0;
+  padding-right: 4rem;
 
   a {
     text-decoration: none;
@@ -72,7 +72,7 @@ const ListItem = styled.li`
   padding-right: 1.5rem;
 
   :first-child {
-    padding-left: 1rem;
+    padding-left: 4rem;
   }
 
   @media (max-width: 770px) {
@@ -81,7 +81,6 @@ const ListItem = styled.li`
 `
 const MenuLink = styled(StyledLink)`
   font-size: 1.1rem;
-  font-weight: bold;
   color: ${props => props.theme.paletteFontPrimary};
   letter-spacing: 0.1rem;
   text-transform: uppercase;

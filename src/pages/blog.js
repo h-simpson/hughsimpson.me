@@ -30,7 +30,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             path
-            date(formatString: "MMMM Do YYYY")
+            date(formatString: "MMMM Do, YYYY")
             title
             author
             excerpt
