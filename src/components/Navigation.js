@@ -1,5 +1,5 @@
 import React from 'react'
-import StyledLink from '../components/StyledLink'
+import RouterLink from '../components/RouterLink'
 import styled, { ThemeProvider } from 'styled-components'
 import GitHubIcon from 'react-icons/lib/fa/github'
 import LinkedIn from 'react-icons/lib/fa/linkedin'
@@ -79,7 +79,7 @@ const ListItem = styled.li`
     padding: 0.5rem;
   }
 `
-const MenuLink = styled(StyledLink)`
+const MenuLink = styled(RouterLink)`
   font-size: 1.1rem;
   color: ${props => props.theme.paletteFontPrimary};
   letter-spacing: 0.1rem;

@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import theme from '../styles/theme.js'
 import StyledParagraph from '../components/StyledParagraph'
+import GenericLink from '../components/GenericLink'
+import RightArrow from '../components/RightArrow'
 
 class Index extends React.Component {
   render() {
@@ -20,13 +22,17 @@ class Index extends React.Component {
         </Helmet>
         <Hero>
           <HeroContent>
-            <SiteTitle>Hugh Simpson</SiteTitle>
-            <StyledParagraph>
+            <HeroTitle>Hugh Simpson</HeroTitle>
+            <HeroParagraph>
               Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub copper mug air
-              plant. Live-edge fam kale chips, sriracha prism kombucha lyft post-ironic listicle. Health goth jianbing
-              meggings shoreditch. Cliche cray seitan, typewriter everyday carry organic cold-pressed austin church-key
-              irony .
-            </StyledParagraph>
+              plant. Live-edge fam kale chips, sriracha prism kombucha lyft post-ironic listicle.
+            </HeroParagraph>
+            <HeroLinkContainer>
+              <GenericLink href="mailto:hughesimpson@gmail.com" noUnderline>
+                Get in touch
+              </GenericLink>
+              <RightArrow />
+            </HeroLinkContainer>
           </HeroContent>
         </Hero>
       </div>
@@ -40,7 +46,7 @@ const Hero = styled.section`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 88vh;
+  height: 75vh;
   align-items: center;
   justify-content: center;
 `
@@ -50,25 +56,33 @@ const HeroContent = styled.div`
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  font-weight: 100;
+  color: ${props => props.theme.paletteFontPrimary};
 
   @media (min-width: 500px) {
     width: 80%;
   }
 
-  @media (min-width: 768px) {
-    width: 80%;
-  }
-
   @media (min-width: 1100px) {
     width: 80%;
+    max-width: 700px;
   }
 `
 
-const SiteTitle = styled.h1`
-  color: ${props => props.theme.paletteFontPrimary};
-  font-family: ${props => props.theme.fontFamilyPrimary};
+const HeroTitle = styled.h1`
   font-size: 4rem;
   margin: 0 0 50px 0;
+`
+
+const HeroParagraph = styled(StyledParagraph)`
+  padding-bottom: 2rem;
+  margin: 0;
+`
+
+const HeroLinkContainer = styled.div`
+  display: flex;
+  align-items: center;
 `
 
 export const pageQuery = graphql`
