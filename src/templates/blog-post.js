@@ -49,28 +49,28 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 const BlogTitle = styled.h1`
-  font-family: ${props => props.theme.headingFont};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   font-size: 2rem;
   text-decoration: none;
 `
 const BlogCategory = styled.h4`
-  font-family: ${props => props.theme.headingFont};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   font-size: 1.5rem;
 `
 const BlogDate = styled.h3`
-  font-family: ${props => props.theme.headingFont};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   font-size: 1.3rem;
 `
 
 const BlogBody = styled.section`
-  font-family: ${props => props.theme.bodyFont};
+  font-family: ${props => props.theme.fontFamilySecondary};
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: ${props => props.theme.headingFont};
+    font-family: ${props => props.theme.fontFamilyPrimary};
   }
   font-size: 1.3rem;
 `

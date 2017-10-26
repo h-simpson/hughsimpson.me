@@ -65,8 +65,8 @@ const HeroContent = styled.div`
 `
 
 const SiteTitle = styled.h1`
-  color: ${props => props.theme.headingFontColor};
-  font-family: ${props => props.theme.headingFont};
+  color: ${props => props.theme.paletteFontPrimary};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   font-size: 4rem;
   margin: 0 0 50px 0;
 `

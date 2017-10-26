@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 export default styled.p`
-  font-family: ${props => props.theme.bodyFont};
+  font-family: ${props => props.theme.fontFamilySecondary};
   font-size: 1.2rem;
   margin: 0;
 

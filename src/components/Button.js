@@ -17,13 +17,13 @@ export default styled.button`
   text-decoration: none;
   transition: all 0.15s ease;
   color: #fff;
-  background: ${props => props.theme.linkColor};
-  font-family: ${props => props.theme.headingFont};
+  background: ${props => props.theme.wisteria};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   font-size: 1rem;
   font-weight: 600;
 
   &:hover {
-    background: ${props => props.theme.clickedLinkColor};
+    background: ${props => props.theme.blueChalk};
     transform: translateY(-1px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
   }

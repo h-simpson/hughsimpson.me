@@ -52,7 +52,7 @@ const PurpleBackground = styled.div`
   height: 55vh;
   transform: skewY(-35deg);
   transform-origin: 0;
-  background-color: #f5eefe;
+  background-color: ${props => props.theme.paletteSecondary};
   z-index: -999;
 
   @media (max-width: 770px) {

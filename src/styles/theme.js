@@ -3,16 +3,15 @@ require('typeface-scope-one')
 
 const theme = {
   // Typography
-  bodyFont: 'Spectral',
-  headingFont: 'Scope One',
+  fontFamilySecondary: 'Spectral',
+  fontFamilyPrimary: 'Scope One',
 
   // Colors
-  bodyFontColor: '#3d3347',
-  secondaryBodyFontColor: 'rgba(38, 32, 44, .5)',
-  headingFontColor: '#26202c',
-  linkColor: '#9063bb',
-  clickedLinkColor: '#eed9ff',
-  backgroundColor: '#f6f9fc'
+  paletteFontPrimary: '#34434b',
+  paletteFontSecondary: '#686368',
+  palettePrimary: '#9063bb',
+  paletteSecondary: '#eed9ff',
+  paletteTertiary: '#f6f9fc'
 }
 
 export default theme

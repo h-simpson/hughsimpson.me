@@ -68,7 +68,7 @@ const MenuList = styled.ul`
 
 const ListItem = styled.li`
   display: inline;
-  font-family: ${props => props.theme.headingFont};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   padding-right: 1.5rem;
 
   :first-child {
@@ -82,6 +82,7 @@ const ListItem = styled.li`
 const MenuLink = styled(StyledLink)`
   font-size: 1.1rem;
   font-weight: bold;
-  color: ${props => props.theme.bodyFontColor};
+  color: ${props => props.theme.paletteFontPrimary};
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
 `

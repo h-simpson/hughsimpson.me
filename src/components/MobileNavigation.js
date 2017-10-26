@@ -44,8 +44,8 @@ const MenuRow = styled.nav`
   left: 0;
   right: 0;
   z-index: 1;
-  background: #eed9ff;
-  border-top: 4px solid #9063bb;
+  background: ${props => props.theme.paletteSecondary};
+  border-top: 4px solid ${props => props.theme.palettePrimary};
 
   @media (min-width: 770px) {
     border: none;
@@ -78,7 +78,7 @@ const MenuList = styled.ul`
 
 const ListItem = styled.li`
   display: inline;
-  font-family: ${props => props.theme.headingFont};
+  font-family: ${props => props.theme.fontFamilyPrimary};
   padding-right: 1.5rem;
 
   :first-child {
@@ -92,6 +92,7 @@ const ListItem = styled.li`
 const MenuLink = styled(StyledLink)`
   font-size: 1.1rem;
   font: 300;
-  color: ${props => props.theme.bodyFontColor};
+  color: ${props => props.theme.paletteFontPrimary};
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 `
