@@ -27,7 +27,7 @@ const Container = styled.section`
 
 const PostCard = styled.article`
   width: 90vw;
-  padding: 0.5rem 1.15rem;
+  padding: 1.5rem 1.15rem;
   transition: padding 300ms ease;
 
   @media (min-width: 770px) {
@@ -62,6 +62,7 @@ const PostTitle = styled.h1`
   color: ${props => props.theme.paletteFontPrimary};
   font-size: 1.5rem;
   font-weight: 500;
+  margin: 0;
 `
 
 const PostExcerpt = styled.p`
@@ -69,15 +70,17 @@ const PostExcerpt = styled.p`
   color: ${props => props.theme.paletteFontSecondary};
   font-size: 1rem;
   font-weight: 100;
-  margin: 0;
-  padding-bottom: 0.5rem;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
   line-height: 1.5;
 `
 
 const BlogAuthor = styled.p`
   font-family: ${props => props.theme.fontFamilyPrimary};
+  font-weight: 100;
   color: ${props => props.theme.paletteFontSecondary};
   font-size: 1rem;
+  margin: 0.5rem 0 0 0;
 
   :before {
     width: 30px;
