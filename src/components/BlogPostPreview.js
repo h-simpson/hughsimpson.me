@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { Page, Row, Column } from 'hedron'
 
-const BlogPostPreview = ({ title, date, author, image, excerpt, path }) => (
+const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
   <Container>
     <PostCard sm={11} md={8} lg={6} fluid>
       <PostLink to={path}>
         <PostTitle>{title}</PostTitle>
         <PostExcerpt>{excerpt}</PostExcerpt>
-        <BlogAuthor>
-          {author} on {date}
-        </BlogAuthor>
+        <BlogAuthor>{date}</BlogAuthor>
       </PostLink>
     </PostCard>
   </Container>

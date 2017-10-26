@@ -32,7 +32,6 @@ export const pageQuery = graphql`
             path
             date(formatString: "MMMM Do, YYYY")
             title
-            author
             excerpt
           }
         }
