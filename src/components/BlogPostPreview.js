@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { Page, Row, Column } from 'hedron'
 
 const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
   <Container>
@@ -17,22 +16,27 @@ const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
 
 export default BlogPostPreview
 
-const Container = styled(Row)`
+const Container = styled.section`
+  display: flex;
+
   @media (min-width: 770px) {
     margin-bottom: 20px;
   }
   justify-content: center;
 `
 
-const PostCard = styled(Column)`
+const PostCard = styled.article`
+  width: 90vw;
   padding: 0.5rem 1.15rem;
   transition: padding 300ms ease;
 
   @media (min-width: 770px) {
-    padding: 3.5rem 3.15rem;
+    width: 60vw;
+    max-width: 600px;
+    padding: 3rem 2.8rem;
     background-color: #fff;
-    border-radius: 8px;
-    border-top: 5px solid ${props => props.theme.palettePrimary};
+    border-radius: 5px;
+
     box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -57,7 +61,7 @@ const PostTitle = styled.h1`
   font-family: ${props => props.theme.fontFamilyPrimary};
   color: ${props => props.theme.paletteFontPrimary};
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 `
 
 const PostExcerpt = styled.p`
@@ -77,8 +81,8 @@ const BlogAuthor = styled.p`
 
   :before {
     width: 30px;
-    height: 4px;
-    background-color: ${props => props.theme.palettePrimary};
+    height: 6px;
+    background-color: ${props => props.theme.paletteTertiary};
     display: block;
     content: '';
     position: absolute;

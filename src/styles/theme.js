@@ -8,11 +8,11 @@ const theme = {
   fontFamilySecondary: 'Spectral',
 
   // Colors
-  paletteFontPrimary: '#34434b',
+  paletteFontPrimary: '#494e58',
   paletteFontSecondary: '#7f8698',
   palettePrimary: '#9063bb',
-  paletteSecondary: '#eed9ff',
-  paletteTertiary: '#f7f7f7'
+  paletteSecondary: '#f4f7f9',
+  paletteTertiary: '#eaebef'
 }
 
 export default theme

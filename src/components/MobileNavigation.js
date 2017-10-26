@@ -45,7 +45,7 @@ const MenuRow = styled.nav`
   right: 0;
   z-index: 1;
   background: ${props => props.theme.paletteSecondary};
-  border-top: 4px solid ${props => props.theme.palettePrimary};
+  border-top: 7px solid ${props => props.theme.paletteTertiary};
 
   @media (min-width: 770px) {
     border: none;

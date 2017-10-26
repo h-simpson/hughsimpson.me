@@ -7,7 +7,7 @@ injectGlobal`
 
     //TODO Take out of injected global styles
     @media (min-width: 770px) {
-      background-color: #f7f7f7;
+      background-color: #f4f7f9;
     }
   }
 `
