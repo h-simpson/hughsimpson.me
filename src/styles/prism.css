@@ -141,13 +141,13 @@ pre[class*='language-'] {
 }
 
 .gatsby-highlight-code-line {
-  background-color: #ecddff;
+  background-color: rgba(61, 91, 253, 0.25);
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  border-left: 0.25em solid #927cea;
+  border-left: 0.25em solid #6079fd;
 }
 
 /**
