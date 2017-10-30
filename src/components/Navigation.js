@@ -52,7 +52,7 @@ const MenuList = styled.ul`
   list-style: none;
   text-align: center;
   margin: 2rem 0 0 0;
-  padding-right: 4rem;
+  padding: 0 6rem 0 0;
 
   a {
     text-decoration: none;
@@ -72,7 +72,7 @@ const ListItem = styled.li`
   padding-right: 1.5rem;
 
   :first-child {
-    padding-left: 4rem;
+    padding-left: 6rem;
   }
 
   @media (max-width: 770px) {
