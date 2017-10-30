@@ -18,4 +18,21 @@ export default () => (
 const SVG = styled.svg`
   stroke-width: 10;
   margin-left: 15px;
+  animation: bounce 2s infinite;
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(15px);
+    }
+    60% {
+      transform: translateX(7px);
+    }
+  }
 `
