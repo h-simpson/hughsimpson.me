@@ -7,21 +7,16 @@ import theme from '../styles/theme.js'
 import Navigation from '../components/Navigation.js'
 import MobileNavigation from '../components/MobileNavigation.js'
 
-// Require styles for code block syntax highlighting (with Prism)
-require('../styles/prism.css')
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-
     return (
       <ThemeProvider theme={theme}>
-        <div>
-          <BackgroundDiagonal />
+        <Page>
           <Navigation />
           {children()}
           <MobileNavigation />
-        </div>
+        </Page>
       </ThemeProvider>
     )
   }
@@ -29,18 +24,11 @@ class Template extends React.Component {
 
 export default Template
 
-const BackgroundDiagonal = styled.div`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 95vh;
-  transform: skewY(-12deg);
-  transform-origin: 0;
-  background-color: ${props => props.theme.paletteSecondary};
-  z-index: -999;
+const Page = styled.div`
+  min-height: 100vh;
 
-  @media (max-width: 770px) {
-    height: 65vh;
+  @media (min-width: 770px) {
+    background-color: #f4f7f9;
   }
 `
 

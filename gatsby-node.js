@@ -43,6 +43,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           createPage({
             path: edge.node.frontmatter.path,
             component: blogPost,
+            layout: `blog`,
             context: {
               path: edge.node.frontmatter.path
             }
@@ -61,7 +62,7 @@ exports.onCreatePage = async ({ page, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     if (page.path.match(/^\/blog/)) {
       // It's assumed that `landingPage.js` exists in the `/layouts/` directory
-      page.layout = 'blog'
+      page.layout = 'blogIndex'
 
       // Update the page.
       createPage(page)
