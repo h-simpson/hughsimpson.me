@@ -23,6 +23,7 @@ class BlogPostTemplate extends React.Component {
           <meta property="og:description" content={`${post.frontmatter.excerpt}`} />
           <meta property="og:site_name" content={siteTitle} />
           <meta property="og:locale" content="en_UK" />
+          <meta name="theme-color" content="#f4f7f9" />
         </Helmet>
         <BlogTitle>{post.frontmatter.title}</BlogTitle>
         <BlogDate>{post.frontmatter.date}</BlogDate>
