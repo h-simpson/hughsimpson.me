@@ -84,6 +84,7 @@ const BlogBody = styled.section`
   max-width: 800px;
   padding: 0;
   margin-top: 2rem;
+  margin-bottom: 80px;
   h1,
   h2,
   h3,
