@@ -26,7 +26,6 @@
     "prop-types": "^15.5.10",
     "react-icons": "^2.2.7",
     "typeface-rubik": "^0.0.43",
-    "typeface-scope-one": "^0.0.40",
     "typeface-spectral": "^0.0.35"
   },
   "devDependencies": {

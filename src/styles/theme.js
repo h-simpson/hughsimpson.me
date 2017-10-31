@@ -1,5 +1,4 @@
 require('typeface-spectral')
-require('typeface-scope-one')
 require('typeface-rubik')
 
 const theme = {
