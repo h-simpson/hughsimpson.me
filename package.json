@@ -22,7 +22,6 @@
     "gatsby-source-filesystem": "^1.4.3",
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
-    "hedron": "^0.7.1",
     "lodash": "^4.15.0",
     "prop-types": "^15.5.10",
     "react-icons": "^2.2.7",
