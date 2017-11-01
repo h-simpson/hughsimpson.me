@@ -7,6 +7,7 @@ import theme from '../styles/theme.js'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
+import GenericLink from '../components/GenericLink'
 
 class Index extends React.Component {
   render() {
@@ -29,6 +30,17 @@ class Index extends React.Component {
         <Container>
           <ProjectCard>
             <ProjectTitle>Example project</ProjectTitle>
+            <ProjectExcerpt>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+              explicabo.
+            </ProjectExcerpt>
+            <ProjectLink href="" noUnderline>
+              Read more
+            </ProjectLink>
+            <ProjectLink href="" noUnderline>
+              View code
+            </ProjectLink>
           </ProjectCard>
         </Container>
       </div>
@@ -40,7 +52,7 @@ export default Index
 
 const ProjectCard = styled(Card)`
   width: 90vw;
-  height: 20vh;
+  min-height: 20vh;
   margin-top: 10vh;
   @media (min-width: 770px) {
     width: 60vw;
@@ -61,9 +73,23 @@ const ProjectExcerpt = styled.p`
   color: ${props => props.theme.paletteFontSecondary};
   font-size: 1rem;
   font-weight: 100;
-  margin: 1.5rem 0 0 0;
+  margin: 1.5rem 0 1.5rem 0;
   padding: 0;
   line-height: 1.5;
+
+  :before {
+    width: 30px;
+    height: 6px;
+    background-color: ${props => props.theme.paletteTertiary};
+    display: block;
+    content: '';
+    position: absolute;
+    margin-top: -1rem;
+  }
+`
+
+const ProjectLink = styled(GenericLink)`
+  margin: 0 2rem 0 0;
 `
 
 export const pageQuery = graphql`

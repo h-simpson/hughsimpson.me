@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const Card = styled.article`
   padding: 1.5rem 1.15rem;
   transition: padding 300ms ease;
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  color: ${props => props.theme.paletteFontPrimary};
 
   @media (min-width: 770px) {
     padding: 3rem 2.8rem;
