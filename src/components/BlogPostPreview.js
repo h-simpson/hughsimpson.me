@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import Container from '../components/Container'
 import Card from '../components/Card'
 
 const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
@@ -16,15 +17,6 @@ const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
 )
 
 export default BlogPostPreview
-
-const Container = styled.section`
-  display: flex;
-
-  @media (min-width: 770px) {
-    margin-bottom: 20px;
-  }
-  justify-content: center;
-`
 
 const PostCard = styled(Card)`
   width: 90vw;
