@@ -35,12 +35,8 @@ class Index extends React.Component {
               rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
               explicabo.
             </ProjectExcerpt>
-            <ProjectLink href="" noUnderline>
-              Read more
-            </ProjectLink>
-            <ProjectLink href="" noUnderline>
-              View code
-            </ProjectLink>
+            <ProjectLink href="">Read more</ProjectLink>
+            <ProjectLink href="">View code</ProjectLink>
           </ProjectCard>
         </Container>
       </div>
@@ -53,7 +49,7 @@ export default Index
 const ProjectCard = styled(Card)`
   width: 90vw;
   min-height: 20vh;
-  margin-top: 10vh;
+  margin: 10vh 0;
   @media (min-width: 770px) {
     width: 60vw;
     max-width: 600px;
