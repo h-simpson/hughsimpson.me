@@ -98,7 +98,7 @@ const BlogBody = styled.section`
   font-size: 1.3rem;
 
   a {
-    color: #6079fd;
+    color: ${props => props.theme.palettePrimary};
     font-family: inherit;
     font-weight: 600;
     text-decoration: none;
@@ -118,7 +118,7 @@ const BlogBody = styled.section`
       height: 13px;
       bottom: 2px;
       left: 0;
-      background-color: rgba(61, 91, 253, 0.25);
+      background-color: ${props => props.theme.palettePrimaryTransparent};
       transform: scaleX(0);
       transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0s;
     }
