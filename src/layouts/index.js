@@ -18,6 +18,7 @@ class Template extends React.Component {
       <ThemeProvider theme={theme}>
         <div>
           <BackgroundDiagonal />
+          <ContrastDiagonal />
           <Navigation />
           {children()}
           <MobileNavigation />
@@ -33,10 +34,24 @@ const BackgroundDiagonal = styled.div`
   position: absolute;
   top: 0;
   width: 100%;
-  height: 95vh;
-  transform: skewY(-12deg);
+  height: 80vh;
+  transform: skewY(6deg);
   transform-origin: 0;
   background-color: ${props => props.theme.paletteSecondary};
+  z-index: -999;
+
+  @media (max-width: 770px) {
+    height: 65vh;
+  }
+`
+const ContrastDiagonal = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 85vh;
+  transform: skewY(-20deg);
+  transform-origin: 0;
+  background-color: ${props => props.theme.paletteContrast};
   z-index: -999;
 
   @media (max-width: 770px) {

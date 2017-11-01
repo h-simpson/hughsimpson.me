@@ -17,7 +17,7 @@ class Index extends React.Component {
           <title>{siteTitle}</title>
           <meta
             name="description"
-            content="Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub."
+            content="Digital project manager with an interest for design, programming and all things digital."
           />
         </Helmet>
         <Hero
@@ -26,12 +26,45 @@ class Index extends React.Component {
           link="Get in touch"
           to="mailto:hughesimpson@gmail.com"
         />
+        <Container>
+          <ProjectCard>
+            <ProjectTitle>Example project</ProjectTitle>
+          </ProjectCard>
+        </Container>
       </div>
     )
   }
 }
 
 export default Index
+
+const ProjectCard = styled(Card)`
+  width: 90vw;
+  height: 20vh;
+  margin-top: 10vh;
+  @media (min-width: 770px) {
+    width: 60vw;
+    max-width: 600px;
+  }
+`
+
+const ProjectTitle = styled.h1`
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  color: ${props => props.theme.paletteFontPrimary};
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+`
+
+const ProjectExcerpt = styled.p`
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  color: ${props => props.theme.paletteFontSecondary};
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 1.5rem 0 0 0;
+  padding: 0;
+  line-height: 1.5;
+`
 
 export const pageQuery = graphql`
   query ContactQuery {

@@ -56,6 +56,7 @@ const HeroTitle = styled.h1`
 `
 
 const HeroParagraph = styled(StyledParagraph)`
+  max-width: 600px;
   padding-bottom: 2rem;
   margin: 0;
 `
