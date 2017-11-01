@@ -24,8 +24,7 @@ class Index extends React.Component {
           <HeroContent>
             <HeroTitle>Hugh Simpson</HeroTitle>
             <HeroParagraph>
-              Marfa literally hot chicken, cred scenester beard salvia tousled shabby chic gastropub copper mug air
-              plant. Live-edge fam kale chips, sriracha prism kombucha lyft post-ironic listicle.
+              Digital project manager with an interest for design, programming and all things digital.
             </HeroParagraph>
             <HeroLinkContainer>
               <GenericLink href="mailto:hughesimpson@gmail.com" noUnderline>
