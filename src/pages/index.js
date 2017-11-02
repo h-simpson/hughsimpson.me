@@ -29,14 +29,12 @@ class Index extends React.Component {
         />
         <Container>
           <ProjectCard>
-            <ProjectTitle>Example project</ProjectTitle>
-            <ProjectExcerpt>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo.
-            </ProjectExcerpt>
+            <ProjectTitle>Personal website</ProjectTitle>
+            <ProjectExcerpt>My personal website built with Gatsby - a static site generator for React.</ProjectExcerpt>
             <ProjectLink href="">Read more</ProjectLink>
-            <ProjectLink href="">View code</ProjectLink>
+            <ProjectLink href="https://github.com/h-simpson/hughsimpson.me" target="_blank" rel="nofollow noopener">
+              View code
+            </ProjectLink>
           </ProjectCard>
         </Container>
       </div>
