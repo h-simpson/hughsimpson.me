@@ -35,7 +35,7 @@ const BackgroundDiagonal = styled.div`
   top: 0;
   width: 100%;
   height: 80vh;
-  transform: skewY(6deg);
+  transform: skewY(4deg);
   transform-origin: 0;
   background-color: ${props => props.theme.paletteSecondary};
   z-index: -999;
