@@ -1,2 +1,2 @@
 # Personal website
-My personal website, built with GatsbyJS - [hughsimpson.me](https://hughsimpson.me).
+Personal website and portfolio, built with Gatsby - [hughsimpson.me](https://hughsimpson.me).
