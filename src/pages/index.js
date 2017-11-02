@@ -8,6 +8,7 @@ import Container from '../components/Container'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
 import GenericLink from '../components/GenericLink'
+import RouterLink from '../components/RouterLink'
 
 class Index extends React.Component {
   render() {
@@ -31,7 +32,7 @@ class Index extends React.Component {
           <ProjectCard>
             <ProjectTitle>Personal website</ProjectTitle>
             <ProjectExcerpt>My personal website built with Gatsby - a static site generator for React.</ProjectExcerpt>
-            <ProjectLink href="">Read more</ProjectLink>
+            <RouterLink to="/personal-website-gatsby/">Read more</RouterLink>
             <ProjectLink href="https://github.com/h-simpson/hughsimpson.me" target="_blank" rel="nofollow noopener">
               View code
             </ProjectLink>
@@ -83,7 +84,7 @@ const ProjectExcerpt = styled.p`
 `
 
 const ProjectLink = styled(GenericLink)`
-  margin: 0 2rem 0 0;
+  margin-left: 2rem;
 `
 
 export const pageQuery = graphql`
