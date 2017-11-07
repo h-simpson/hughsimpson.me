@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import styled, { ThemeProvider } from 'styled-components'
@@ -7,7 +7,7 @@ import theme from '../styles/theme.js'
 import Navigation from '../components/Navigation.js'
 import MobileNavigation from '../components/MobileNavigation.js'
 
-class Template extends React.Component {
+class Template extends Component {
   render() {
     const { location, children } = this.props
 
