@@ -188,3 +188,9 @@ injectGlobal`
 ```
 
 # What's next?
+
+Although not a massive issue currently, there are few additions I have in the pipeline:
+
+- Contact form,
+- Filtering blog posts,
+- 'Load more' or pagination of blog index page.
