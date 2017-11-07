@@ -28,7 +28,7 @@ class Index extends React.Component {
           link="Get in touch"
           to="mailto:hughesimpson@gmail.com"
         />
-        <Container>
+        <ProjectContainer>
           <ProjectCard>
             <ProjectTitle>Personal website</ProjectTitle>
             <ProjectExcerpt>My personal website built with Gatsby - a static site generator for React.</ProjectExcerpt>
@@ -37,7 +37,16 @@ class Index extends React.Component {
               View code
             </ProjectLink>
           </ProjectCard>
-        </Container>
+          <ProjectCard>
+            <ProjectTitle>Alexa Samsung Remote</ProjectTitle>
+            <ProjectExcerpt>
+              An Alexa server and companion TV remote client to interact with 2016 Samsung TVs by voice commands.
+            </ProjectExcerpt>
+            <ProjectLink href="https://github.com/h-simpson/alexa-samsung-tv" target="_blank" rel="nofollow noopener">
+              View code
+            </ProjectLink>
+          </ProjectCard>
+        </ProjectContainer>
       </div>
     )
   }
@@ -45,10 +54,20 @@ class Index extends React.Component {
 
 export default Index
 
+const ProjectContainer = styled(Container)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  :last-child {
+    margin-bottom: 10vh;
+  }
+`
+
 const ProjectCard = styled(Card)`
   width: 90vw;
   min-height: 20vh;
-  margin: 10vh 0;
+  margin-top: 5vh;
   @media (min-width: 770px) {
     width: 60vw;
     max-width: 600px;

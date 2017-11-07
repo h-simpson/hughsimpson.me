@@ -7,7 +7,6 @@ const Container = styled.section`
   @media (min-width: 770px) {
     margin-bottom: 20px;
   }
-  justify-content: center;
 `
 
 export default Container
