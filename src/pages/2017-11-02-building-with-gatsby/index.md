@@ -3,7 +3,6 @@ title: Building my personal site with Gatsby
 date: "2017-11-02"
 path: "/personal-website-gatsby/"
 author: Hugh Simpson
-image: "./Placeholder.png"
 excerpt: Building my personal site and blog with Gatsby - a static site generator for React.
 ---
 
@@ -12,6 +11,9 @@ My preview personal site was little more than a holding page so I've been intend
 There are a number of alternatives, including [Next.js](https://github.com/zeit/next.js/) (which announced static export support in 3.0) and the relatively new [React Static](https://github.com/nozzle/react-static) which describes itself as 'A progressive static-site framework for React'. But for me Gatsby seemed like the best choice for a number of reasons. I'll briefly outline the reasons why below, before highlighting a couple fo lessons learned from the process. 
 
 # Gatsby
+
+- positive
+- negative bullet
 
 # GraphQL
 

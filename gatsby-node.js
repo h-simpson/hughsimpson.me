@@ -19,13 +19,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 node {
                   frontmatter {
                     path
-                    image {
-                      childImageSharp {
-                        responsiveSizes {
-                          src
-                        }
-                      }
-                    }
                   }
                 }
               }
