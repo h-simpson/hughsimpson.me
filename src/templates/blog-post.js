@@ -93,7 +93,15 @@ const BlogBody = styled.section`
   h6 {
     font-family: ${props => props.theme.fontFamilyPrimary};
     color: ${props => props.theme.paletteFontPrimary};
+  }
+  h1 {
     font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
   }
   font-size: 1.3rem;
 
