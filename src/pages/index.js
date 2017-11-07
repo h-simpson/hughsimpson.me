@@ -67,10 +67,10 @@ const ProjectContainer = styled(Container)`
 const ProjectCard = styled(Card)`
   width: 90vw;
   min-height: 20vh;
-  margin-top: 5vh;
   @media (min-width: 770px) {
     width: 60vw;
     max-width: 600px;
+    margin-top: 5vh;
   }
 `
 
