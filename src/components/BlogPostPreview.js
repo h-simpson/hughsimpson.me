@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import Card from '../components/Card'
 
 const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
-  <Container>
+  <BlogContainer>
     <PostCard sm={11} md={8} lg={6} fluid>
       <PostLink to={path}>
         <PostTitle>{title}</PostTitle>
@@ -13,10 +13,16 @@ const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
         <BlogAuthor>{date}</BlogAuthor>
       </PostLink>
     </PostCard>
-  </Container>
+  </BlogContainer>
 )
 
 export default BlogPostPreview
+
+const BlogContainer = styled(Container)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const PostCard = styled(Card)`
   width: 90vw;
