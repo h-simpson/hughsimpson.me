@@ -6,22 +6,19 @@ author: Hugh Simpson
 excerpt: Building my personal site and blog with Gatsby - a static site generator for React.
 ---
 
-My preview personal site was little more than a holding page so I've been intending to get round to building a new one. React was the obvious choice but I wanted to be sure performance was as good as, or better, than before. Fortunately, Gatsby makes it trivial to develop siatic websites with React. 
+*Building my personal website and portfolio with Gatsby - a static site generator for React.*
 
-There are a number of alternatives, including [Next.js](https://github.com/zeit/next.js/) (which announced static export support in 3.0) and the relatively new [React Static](https://github.com/nozzle/react-static) which describes itself as 'A progressive static-site framework for React'. But for me Gatsby seemed like the best choice for a number of reasons. I'll briefly outline the reasons why below, before highlighting a couple fo lessons learned from the process. 
+My previous site was little more than a holding page, so I had intended to build a new one for a while. React was the obvious choice but I also wanted to make sure the site was as fast, or faster, than before. That can only be achieved with server side rendering (SSR). One of the most popular frameworks for server-rendered React apps is [Next.js](https://github.com/zeit/next.js/). I had intended to go down this route when I discovered Gatsby (which the [React docs](https://reactjs.org/) had just been updated on). Gatsby isn't just a framework for server-rendered apps but a 'React static-site generator' - it generates easily deployable static files.
 
-# Gatsby
-
-- positive
-- negative bullet
+Alternatives exist, including Next.js (which announced static export support in 3.0) and the relatively new [React Static](https://github.com/nozzle/react-static) which describes itself as 'A progressive static-site framework for React'. But Gatsby seemed the most mature platform and, ultimately, the most suitable for this project. 
 
 # GraphQL
 
-Gatsby uses GraphQL to pull data into it's components. 
+Gatsby uses GraphQL to pull data, in my case from local markdown files, into it's components at build time. 
 
 [Graph*i*QL](https://github.com/graphql/graphiql) in an in-browser IDE for GraphQL which allows you to run queries and check exactly what data is available to query. I frequently found myself using the autocomplete feature (Ctrl + Space) to see if the data I needed was already available.
 
-Gatsby allows you to fetch data from anywhere, and there a number of Source plugins to make this simple. The `gatsby-source-filesystem` plugin to fetch data directly about local files: 
+Gatsby allows you to fetch data from anywhere, and there a number of Source plugins that make this simple. The `gatsby-source-filesystem` plugin to fetch data directly about local files: 
 
 ```javascript
 yarn add gatsby-source-filesystem
@@ -125,7 +122,7 @@ A more detail explanation, including how pages can be programmatically created f
 
 # Styled Components
 
-styled-components allows you to define your styles alongside normal React components using tagged template literals (this [talk](https://www.youtube.com/watch?v=bIK2NwoK9xk) is a great introduction to styled components).
+styled-components allows you to define your styles alongside normal React components using tagged template literals (this [talk](https://www.youtube.com/watch?v=bIK2NwoK9xk) is a great introduction to styled components). 
 
 Conveniently, Gatsby supports styled-components through gatsby-plugin-styled-components, a simple Gatsby plugin with built-in server side rendering support. 
 
@@ -174,7 +171,7 @@ color: ${props => props.theme.main}
 
 ## Global styles
 
-If you're not familiar with styled-components, you can use the injectGlobal method to write global CSS directly to the stylesheet (rather than returning a component). 
+You can use the injectGlobal method to write global CSS directly to the stylesheet (rather than returning a component). I include this in my styles directory and import into the the default layout. 
 
 ```javascript
 import { injectGlobal } from 'styled-components'
@@ -185,6 +182,29 @@ injectGlobal`
     box-sizing: border-box;
   }
 `
+```
+
+# Typography
+
+In the interests of making the site as fast as possible, fonts are self-hosted using [typefaces](https://github.com/KyleAMathews/typefaces). Typefaces makes it trivial to self-host webfonts - thereby eliminating an extra network requests to Google Fonts. 
+
+It's very straight forward, the following will install Rubik (the main sans-serif I used).
+
+```
+yarn add typeface-rubik
+``` 
+
+And then in the theme.
+
+```javascript
+require('typeface-rubik')
+
+const theme = {
+  // Typography
+  fontFamilyPrimary: 'rubik',
+}
+
+export default theme
 ```
 
 # What's next?
