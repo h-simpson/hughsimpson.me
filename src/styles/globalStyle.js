@@ -4,5 +4,6 @@ injectGlobal`
   body {
     margin: 0;
     box-sizing: border-box;
+    background-color: #fdfdfd;
   }
 `
