@@ -5,6 +5,5 @@ public
 .intermediate-representation/
 .cache/
 .vscode
-yarn.lock
 yarn-error.log
 
