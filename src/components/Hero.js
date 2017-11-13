@@ -28,7 +28,11 @@ const HeroContainer = styled.section`
   height: 50vh;
   align-items: center;
   justify-content: center;
-  margin-top: 10vh;
+  margin: 10vh 0 10vh 0;
+
+  @media (min-width: 500px) {
+    margin: 10vh 0 0 0;
+  }
 `
 
 const HeroContent = styled.div`
