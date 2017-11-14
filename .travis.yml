@@ -12,7 +12,7 @@ services:
   
 branches:
   only:
-  - continuous-deployment
+  - master
 
 install: yarn install
 
@@ -20,6 +20,5 @@ script: yarn run build
 
 after_script: 
   - docker build --tag "$DOCKER_REPO" .
-  - docker run -d -p 80:80 "$DOCKER_REPO" 
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
   - docker push "$DOCKER_REPO"
