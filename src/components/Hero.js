@@ -9,12 +9,14 @@ const Hero = props => (
     <HeroContent>
       <HeroTitle>{props.title}</HeroTitle>
       <HeroParagraph>{props.paragraph}</HeroParagraph>
-      <HeroLinkContainer>
-        <GenericLink href={props.to} noUnderline>
-          {props.link}
-        </GenericLink>
-        <RightArrow />
-      </HeroLinkContainer>
+      {props.link && (
+        <HeroLinkContainer>
+          <GenericLink href={props.to} noUnderline>
+            {props.link}
+          </GenericLink>
+          <RightArrow />
+        </HeroLinkContainer>
+      )}
     </HeroContent>
   </HeroContainer>
 )
