@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Modal = props =>
-  props.isOpen && (
+  props.isOpen ? (
     <ModalContainer>
       <ModalContent>{props.children}</ModalContent>
     </ModalContainer>
