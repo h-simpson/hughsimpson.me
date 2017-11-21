@@ -22,10 +22,16 @@ class Index extends React.Component {
     this.setState({ modalIsOpen: !this.state.modalIsOpen })
   }
 
+  handleKeyDown = e => {
+    if (e.keyCode === 27 && this.state.modalIsOpen) {
+      this.setState({ modalIsOpen: !this.state.modalIsOpen })
+    }
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
-      <div>
+      <div onKeyDown={this.handleKeyDown}>
         <Helmet>
           <title>{siteTitle}</title>
           <meta
