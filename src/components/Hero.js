@@ -17,6 +17,7 @@ const Hero = props => (
           <RightArrow />
         </HeroLinkContainer>
       )}
+      {props.children}
     </HeroContent>
   </HeroContainer>
 )
