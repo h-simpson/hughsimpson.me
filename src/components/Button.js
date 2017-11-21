@@ -2,12 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Button = styled.button`
-  border: 1px solid ${props => props.theme.paletteFontPrimary};
+  border: none;
   border-radius: 4px;
+  min-width: 200px;
   font-size: 1rem;
+  font-weight: 700;
   line-height: 1;
-  padding: 1.2em 2.8em;
-  color: ${props => props.theme.paletteFontPrimary};
+  padding: 1.2em 2.3em;
+  margin: 1rem 0;
+  color: ${props => props.theme.paletteFontSecondary};
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
