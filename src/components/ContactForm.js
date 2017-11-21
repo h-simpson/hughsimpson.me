@@ -1,6 +1,7 @@
 import React from 'react'
 import { withFormik } from 'formik'
 import Yup from 'yup'
+import Button from '../components/Button'
 
 // Our inner form component. Will be wrapped with Formik({..})
 const InnerForm = props => {
@@ -20,13 +21,20 @@ const InnerForm = props => {
         className={errors.email && touched.email ? 'text-input error' : 'text-input'}
       />
       {errors.email && touched.email && <div className="input-feedback">{errors.email}</div>}
-
-      <button type="button" className="outline" onClick={handleReset} disabled={!dirty || isSubmitting}>
+      <label>Message</label>
+      <textarea
+        id="message"
+        placeholder="What do you want to say..."
+        value={values.message}
+        onChange={handleChange}
+        onBlur={handleBlur}
+      />
+      <Button type="button" className="outline" onClick={handleReset} disabled={!dirty || isSubmitting}>
         Reset
-      </button>
-      <button type="submit" disabled={isSubmitting}>
+      </Button>
+      <Button type="submit" disabled={isSubmitting}>
         Submit
-      </button>
+      </Button>
     </form>
   )
 }
