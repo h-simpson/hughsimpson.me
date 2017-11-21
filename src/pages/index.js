@@ -7,10 +7,21 @@ import theme from '../styles/theme.js'
 import Container from '../components/Container'
 import Card from '../components/Card'
 import Hero from '../components/Hero'
+import ContactForm from '../components/ContactForm'
 import GenericLink from '../components/GenericLink'
 import RouterLink from '../components/RouterLink'
+import Button from '../components/Button'
+import Modal from '../components/Modal'
 
 class Index extends React.Component {
+  state = {
+    modlalIsOpen: true
+  }
+
+  toggleModal = () => {
+    this.setState({ modalIsOpen: !this.state.modalIsOpen })
+  }
+
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
@@ -22,12 +33,16 @@ class Index extends React.Component {
             content="Digital project manager with an interest for design, programming and all things digital."
           />
         </Helmet>
+        <Modal isOpen={this.state.modalIsOpen}>
+          <ContactForm />
+          <Button onClick={this.toggleModal}>Close</Button>
+        </Modal>
         <Hero
           title="Hugh Simpson"
           paragraph="Digital project manager with an interest for design, programming and all things digital."
-          link="Get in touch"
-          to="mailto:hughesimpson@gmail.com"
-        />
+        >
+          <Button onClick={this.toggleModal}>Get in Touch</Button>
+        </Hero>
         <ProjectContainer>
           <ProjectCard>
             <ProjectTitle>Personal website</ProjectTitle>
