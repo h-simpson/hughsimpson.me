@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { withFormik } from 'formik'
 import Yup from 'yup'
 import Button from '../components/Button'
@@ -7,35 +8,30 @@ import Button from '../components/Button'
 const InnerForm = props => {
   const { values, touched, errors, dirty, isSubmitting, handleChange, handleBlur, handleSubmit, handleReset } = props
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="email" style={{ display: 'block' }}>
-        Email
-      </label>
-      <input
+    <Form onSubmit={handleSubmit}>
+      <Input
         id="email"
-        placeholder="Enter your email"
+        placeholder="enter your email"
         type="text"
         value={values.email}
         onChange={handleChange}
         onBlur={handleBlur}
         className={errors.email && touched.email ? 'text-input error' : 'text-input'}
       />
+      <Label htmlFor="email">email</Label>
       {errors.email && touched.email && <div className="input-feedback">{errors.email}</div>}
-      <label>Message</label>
-      <textarea
+      <Textarea
         id="message"
-        placeholder="What do you want to say..."
+        placeholder="what do you want to say..."
         value={values.message}
         onChange={handleChange}
         onBlur={handleBlur}
       />
-      <Button type="button" className="outline" onClick={handleReset} disabled={!dirty || isSubmitting}>
-        Reset
-      </Button>
+      <Label>message</Label>
       <Button type="submit" disabled={isSubmitting}>
-        Submit
+        Send message
       </Button>
-    </form>
+    </Form>
   )
 }
 
@@ -54,5 +50,36 @@ const ContactForm = withFormik({
   },
   displayName: 'ContactForm' // helps with React DevTools
 })(InnerForm)
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  color: ${props => props.theme.paletteFontSecondary};
+`
+
+const Input = styled.input`
+  padding: 1rem 0.5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+`
+
+const Label = styled.label`
+  color: ${props => props.theme.paletteFontSecondary};
+`
+
+const Textarea = styled.textarea`
+  padding: 4rem 0.5rem;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+`
 
 export default ContactForm
