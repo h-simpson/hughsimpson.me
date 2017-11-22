@@ -39,9 +39,8 @@ class Index extends React.Component {
             content="Digital project manager with an interest for design, programming and all things digital."
           />
         </Helmet>
-        <Modal isOpen={this.state.modalIsOpen}>
+        <Modal isOpen={this.state.modalIsOpen} handleClose={this.toggleModal}>
           <ContactForm />
-          <Button onClick={this.toggleModal}>Close</Button>
         </Modal>
         <Hero
           title="Hugh Simpson"
