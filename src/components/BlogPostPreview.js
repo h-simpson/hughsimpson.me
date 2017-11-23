@@ -18,13 +18,13 @@ const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
 
 export default BlogPostPreview
 
-const BlogContainer = styled(Container)`
+const BlogContainer = Container.extend`
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 
-const PostCard = styled(Card)`
+const PostCard = Card.extend`
   width: 90vw;
 
   @media (min-width: 770px) {
