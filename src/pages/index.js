@@ -46,7 +46,7 @@ class Index extends React.Component {
           />
         </Helmet>
         <Modal isOpen={this.state.modalIsOpen} handleClose={this.toggleModal}>
-          <Title>Contact form</Title>
+          <Title>Contact</Title>
           {this.state.contactFormSubmitted ? <p>Submitted</p> : <ContactForm onSubmit={this.handleContactSubmit} />}
         </Modal>
         <Hero
