@@ -26,7 +26,6 @@
     "lodash": "^4.15.0",
     "prop-types": "^15.5.10",
     "react-icons": "^2.2.7",
-    "react-modal": "^3.1.2",
     "typeface-rubik": "^0.0.43",
     "typeface-spectral": "^0.0.35",
     "yup": "^0.23.0"
