@@ -40,7 +40,7 @@ const ModalContent = styled.div`
   border-radius: 4px;
   background-color: ${props => props.theme.paletteTertiary};
   box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
-  padding: 2rem 2rem 5rem 2rem;
+  padding: 2rem 1rem 2rem 1rem;
 `
 
 const CloseIcon = styled(Close)`
@@ -48,7 +48,7 @@ const CloseIcon = styled(Close)`
   height: 2rem;
   cursor: pointer;
   color: ${props => props.theme.paletteFontPrimary};
-  padding-left: 80%;
+  align-self: flex-end;
   margin: 0 0 4rem 0;
 `
 
