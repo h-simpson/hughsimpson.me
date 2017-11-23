@@ -3,12 +3,13 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import Container from '../components/Container'
 import Card from '../components/Card'
+import Title from '../components/Title'
 
 const BlogPostPreview = ({ title, date, image, excerpt, path }) => (
   <BlogContainer>
     <PostCard sm={11} md={8} lg={6} fluid>
       <PostLink to={path}>
-        <PostTitle>{title}</PostTitle>
+        <Title>{title}</Title>
         <PostExcerpt>{excerpt}</PostExcerpt>
         <BlogAuthor>{date}</BlogAuthor>
       </PostLink>
@@ -36,14 +37,6 @@ const PostCard = Card.extend`
 const PostLink = styled(Link)`
   text-decoration: none;
   color: inherit;
-`
-
-const PostTitle = styled.h1`
-  font-family: ${props => props.theme.fontFamilyPrimary};
-  color: ${props => props.theme.paletteFontPrimary};
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin: 0;
 `
 
 const PostExcerpt = styled.p`
