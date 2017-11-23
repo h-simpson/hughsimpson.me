@@ -26,7 +26,7 @@ const ModalContainer = styled.div`
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  padding: 50px;
+  padding: 0 50px;
 `
 
 const ModalContent = styled.div`
@@ -38,9 +38,9 @@ const ModalContent = styled.div`
   max-width: 600px;
   min-height: 200px;
   border-radius: 4px;
-  background-color: ${props => props.theme.paletteTertiary};
+  background: linear-gradient(160deg, #fdfdfd 60%, #e7e247 40%);
   box-shadow: rgba(25, 17, 34, 0.05) 0px 3px 10px;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 `
 
 const CloseIcon = styled(Close)`
@@ -49,7 +49,7 @@ const CloseIcon = styled(Close)`
   cursor: pointer;
   color: ${props => props.theme.paletteFontPrimary};
   align-self: flex-end;
-  margin: 0 0 4rem 0;
+  margin-bottom: 2rem;
 `
 
 export default Modal

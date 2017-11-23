@@ -12,10 +12,12 @@ import GenericLink from '../components/GenericLink'
 import RouterLink from '../components/RouterLink'
 import Button from '../components/Button'
 import Modal from '../components/Modal'
+import Title from '../components/Title'
 
 class Index extends React.Component {
   state = {
-    modlalIsOpen: true
+    modlalIsOpen: true,
+    contactFormSubmitted: false
   }
 
   toggleModal = () => {
@@ -26,6 +28,10 @@ class Index extends React.Component {
     if (e.keyCode === 27 && this.state.modalIsOpen) {
       this.setState({ modalIsOpen: !this.state.modalIsOpen })
     }
+  }
+
+  handleContactSubmit = () => {
+    this.setState({ contactFormSubmitted: true })
   }
 
   render() {
@@ -40,7 +46,8 @@ class Index extends React.Component {
           />
         </Helmet>
         <Modal isOpen={this.state.modalIsOpen} handleClose={this.toggleModal}>
-          <ContactForm />
+          <Title>Contact form</Title>
+          {this.state.contactFormSubmitted ? <p>Submitted</p> : <ContactForm onSubmit={this.handleContactSubmit} />}
         </Modal>
         <Hero
           title="Hugh Simpson"
@@ -74,7 +81,7 @@ class Index extends React.Component {
 
 export default Index
 
-const ProjectContainer = styled(Container)`
+const ProjectContainer = Container.extend`
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -84,7 +91,7 @@ const ProjectContainer = styled(Container)`
   }
 `
 
-const ProjectCard = styled(Card)`
+const ProjectCard = Card.extend`
   width: 90vw;
   min-height: 20vh;
   @media (min-width: 770px) {
@@ -122,7 +129,7 @@ const ProjectExcerpt = styled.p`
   }
 `
 
-const ProjectLink = styled(GenericLink)`
+const ProjectLink = GenericLink.extend`
   margin-left: 2rem;
 `
 
