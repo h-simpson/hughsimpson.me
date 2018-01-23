@@ -1,6 +1,6 @@
 ---
 title: Continuous deployment with Travis CI and Docker
-date: "2017-11-27"
+date: "2018-01-23"
 path: "/continuous-deployment/"
 author: Hugh Simpson
 excerpt: Continuous delivery with Travis CI, Docker and watchtower.
