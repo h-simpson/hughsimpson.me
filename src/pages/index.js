@@ -93,7 +93,7 @@ const ProjectContainer = Container.extend`
 
 const ProjectCard = Card.extend`
   width: 90vw;
-  min-height: 20vh;
+  min-height: 150px;
   @media (min-width: 770px) {
     width: 60vw;
     max-width: 600px;
