@@ -47,7 +47,11 @@ class Index extends React.Component {
         </Helmet>
         <Modal isOpen={this.state.modalIsOpen} handleClose={this.toggleModal}>
           <Title>Contact</Title>
-          {this.state.contactFormSubmitted ? <p>Submitted</p> : <ContactForm onSubmit={this.handleContactSubmit} />}
+          {this.state.contactFormSubmitted ? (
+            <ConfirmationMessage>Thanks for your message!</ConfirmationMessage>
+          ) : (
+            <ContactForm onSubmit={this.handleContactSubmit} />
+          )}
         </Modal>
         <Hero
           title="Hugh Simpson"
@@ -130,6 +134,16 @@ const ProjectExcerpt = styled.p`
     position: absolute;
     margin-top: -1rem;
   }
+`
+
+const ConfirmationMessage = styled.p`
+  font-family: ${props => props.theme.fontFamilyPrimary};
+  color: ${props => props.theme.paletteValid};
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1.5rem 0 1.5rem 0;
+  padding: 0;
+  line-height: 1.5;
 `
 
 export const pageQuery = graphql`
