@@ -60,18 +60,18 @@ class Index extends React.Component {
             <ProjectTitle>Personal website</ProjectTitle>
             <ProjectExcerpt>My personal website built with Gatsby - a static site generator for React.</ProjectExcerpt>
             <RouterLink to="/personal-website-gatsby/">Read more</RouterLink>
-            <ProjectLink href="https://github.com/h-simpson/hughsimpson.me" target="_blank" rel="nofollow noopener">
+            <GenericLink href="https://github.com/h-simpson/hughsimpson.me" target="_blank" rel="nofollow noopener">
               View code
-            </ProjectLink>
+            </GenericLink>
           </ProjectCard>
           <ProjectCard>
             <ProjectTitle>Alexa Samsung Remote</ProjectTitle>
             <ProjectExcerpt>
               An Alexa server and companion TV remote client to interact with 2016 Samsung TVs by voice commands.
             </ProjectExcerpt>
-            <ProjectLink href="https://github.com/h-simpson/alexa-samsung-tv" target="_blank" rel="nofollow noopener">
+            <GenericLink href="https://github.com/h-simpson/alexa-samsung-tv" target="_blank" rel="nofollow noopener">
               View code
-            </ProjectLink>
+            </GenericLink>
           </ProjectCard>
         </ProjectContainer>
       </div>
@@ -98,6 +98,9 @@ const ProjectCard = Card.extend`
     width: 60vw;
     max-width: 600px;
     margin-top: 5vh;
+  }
+  a:nth-of-type(2) {
+    margin-left: 2rem;
   }
 `
 
@@ -127,10 +130,6 @@ const ProjectExcerpt = styled.p`
     position: absolute;
     margin-top: -1rem;
   }
-`
-
-const ProjectLink = GenericLink.extend`
-  margin-left: 2rem;
 `
 
 export const pageQuery = graphql`
